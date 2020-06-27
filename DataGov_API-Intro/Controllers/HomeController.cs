@@ -18,6 +18,7 @@ namespace DataGov_API_Intro.Controllers
     // https://www.nps.gov/subjects/developer/get-started.htm
 
     public IActionResult Index()
+    //this is you are making a reqest to the API, like a browser would. Remove all headers, add the key, then we can accept JSON.
     {
       httpClient = new HttpClient();
       httpClient.DefaultRequestHeaders.Accept.Clear();
@@ -31,7 +32,7 @@ namespace DataGov_API_Intro.Controllers
       Parks parks = null;
 
       httpClient.BaseAddress = new Uri(NATIONAL_PARK_API_PATH);
-
+        //get me a response by making a request to the API's endpoint. This can take some time.
       try
       {
         HttpResponseMessage response = httpClient.GetAsync(NATIONAL_PARK_API_PATH).GetAwaiter().GetResult();
@@ -57,3 +58,6 @@ namespace DataGov_API_Intro.Controllers
     }
   }
 }
+
+//paste JSON as classes under edit, professor blew past this part and I still don't know how to do this.
+
