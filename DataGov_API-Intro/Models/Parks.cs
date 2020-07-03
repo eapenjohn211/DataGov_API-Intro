@@ -1,4 +1,9 @@
-﻿namespace DataGov_API_Intro.Models
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace DataGov_API_Intro.Models
 {
   public class Parks
   {
